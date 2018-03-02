@@ -4,9 +4,17 @@ A mini e-commerce application built with Rails 4.2.
 
 ## Screenshots
 
-!["Home Page"](https://github.com/michael-38/tweeter/blob/master/docs/home_page.png)
-!["Composing a Tweet"](https://github.com/michael-38/tweeter/blob/master/docs/compose_tweet.png)
-!["Submitted Tweet"](https://github.com/michael-38/tweeter/blob/master/docs/submit_tweet.png)
+Home Page
+!["Home Page"](https://github.com/michael-38/hyperbeast/blob/master/docs/home_page.png)
+
+Product Page
+!["Product Page"](https://github.com/michael-38/hyperbeast/blob/master/docs/product_page.png)
+
+Checkout (with Stripe)
+!["Checkout"](https://github.com/michael-38/hyperbeast/blob/master/docs/checkout_stripe.png)
+
+Admin Dashboard (Products)
+!["Admin Dashboard"](https://github.com/michael-38/hyperbeast/blob/master/docs/admin_product_page.png)
 
 ## Setup
 
