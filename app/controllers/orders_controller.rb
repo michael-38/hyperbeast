@@ -3,9 +3,6 @@ class OrdersController < ApplicationController
 
   def show
     @order = Order.find(params[:id])
-    puts "-------------------"
-    p @order
-    puts "-------------------"
   end
 
   def create
@@ -15,9 +12,6 @@ class OrdersController < ApplicationController
     if order.valid?
       empty_cart!
       OrderMailer.order_email(order).deliver_now
-      puts "-----------------"
-      puts "order email sent to #{order.email}"
-      puts "-----------------"
       redirect_to order, notice: 'Your Order has been placed.'
     else
       redirect_to cart_path, flash: { error: order.errors.full_messages.first }

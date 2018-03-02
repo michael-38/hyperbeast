@@ -26,6 +26,21 @@
       </div>
     </div>
 
+<div>
+  <% if current_user %>
+    <h2>Add a Review</h2>
+    <%= render 'products/form' %>
+  <% end %>
+</div>
+
+
+  <div>
+  <% review = Review.where(product_id: @product.id) %>
+    <% review.each do |r| %>
+    <%= render 'review', r: r %>
+    <% end %>
+  </div>
+
   </article>
 
 </section>
