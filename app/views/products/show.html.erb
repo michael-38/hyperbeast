@@ -35,7 +35,7 @@
 
 
   <div>
-  <% review = Review.where(product_id: @product.id) %>
+  <% review = Review.where(product_id: @product.id).reverse_order %>
     <% review.each do |r| %>
     <%= render 'review', r: r %>
     <% end %>
