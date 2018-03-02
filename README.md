@@ -1,25 +1,29 @@
-# Jungle
+# HyperBeast
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2.
 
+## Screenshots
+
+!["Home Page"](https://github.com/michael-38/tweeter/blob/master/docs/home_page.png)
+!["Composing a Tweet"](https://github.com/michael-38/tweeter/blob/master/docs/compose_tweet.png)
+!["Submitted Tweet"](https://github.com/michael-38/tweeter/blob/master/docs/submit_tweet.png)
 
 ## Setup
 
-1. Fork & Clone
-2. Run `bundle install` to install dependencies
-3. Create `config/database.yml` by copying `config/database.example.yml`
-4. Create `config/secrets.yml` by copying `config/secrets.example.yml`
-5. Run `bin/rake db:reset` to create, load and seed db
-6. Create .env file based on .env.example
-7. Sign up for a Stripe account
-8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
+1.  Fork & Clone
+2.  Run `bundle install` to install dependencies
+3.  Run `bin/rake db:reset` to create, load and seed db
+4.  Create .env file
+5.  Sign up for a Stripe account
+6.  Put Stripe (test) keys into appropriate .env vars
+7.  Run `bin/rails s -b 0.0.0.0` to start the server
 
-## Stripe Testing
+## Usage
+
+To access admin dashboard (products and categories), use username "Jungle" and password "book".
 
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
-
-More information in their docs: <https://stripe.com/docs/testing#cards>
+More information: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
 
