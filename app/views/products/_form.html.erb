@@ -1,13 +1,7 @@
 <%= form_for ([ @product, @product.reviews.build ]) do |form| %>
-  <p>
-    <%= form.label :rating %><br>
-    <%= form.select :rating, [ '1','2','3','4','5' ], :prompt => 'Select Rating' %>
-  </p>
-  <p>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
+  <dt><%= form.label :rating %></dt>
+  <dd><%= form.select :rating, [ '1','2','3','4','5' ], :prompt => 'Select Rating' %></dd>
+  <dt><%= form.label :description %></dt>
+  <dd><%= form.text_area :description %></dd>
+  <dd><%= form.submit %></dd>
 <% end %>

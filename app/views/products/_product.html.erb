@@ -3,17 +3,17 @@
 
     <%= link_to product do %>
       <%= image_tag product.image.thumb, alt: product.name %>
-      <h4><%= product.name %></h4>
+      <h5 class="product_name"> <%= product.name %></h5>
     <% end %>
   </header>
-  <p class="description">
-    <%= product.description %>
+  <p class="product_price">
+    <%= humanized_money_with_symbol product.price %> CAD
   </p>
   <footer class="actions">
-    <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary', method: :put do %>
-      <%= fa_icon "shopping-cart", text: 'Add' %>
+    <%= link_to add_item_cart_path(product_id: product.id), class: 'btn btn-primary product_add', method: :put do %>
+      <%= fa_icon "shopping-cart", text: 'Add', class: 'add_button_content' %>
     <% end %>
-    <%= link_to product, class: 'btn btn-default pull-right' do %>
+    <%= link_to product, class: 'btn btn-default pull-right product_details' do %>
       Details &raquo;
     <% end %>
   </footer>
@@ -24,7 +24,4 @@
   </aside>
   <% end %>
 
-  <aside class="price">
-    <%= humanized_money_with_symbol product.price %>
-  </aside>
 </article>

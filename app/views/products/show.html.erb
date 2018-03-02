@@ -16,23 +16,12 @@
         <dl class="dl-horizontal">
           <dt>Name</dt>
           <dd><%= @product.name %></dd>
-          <dt>Description</dt>
-          <dd><%= @product.description %></dd>
           <dt>Quantity</dt>
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
-        </dl>
-      </div>
-    </div>
 
-<div>
-  <% if current_user %>
-    <h2>Add a Review</h2>
-    <%= render 'products/form' %>
-  <% end %>
-</div>
-
+          <hr>
 
   <div>
   <% review = Review.where(product_id: @product.id).reverse_order %>
@@ -40,6 +29,23 @@
     <%= render 'review', r: r %>
     <% end %>
   </div>
+
+          <hr>
+
+<div>
+  <% if current_user %>
+    <h4>Add a Review</h4>
+    <%= render 'products/form' %>
+  <% end %>
+</div>
+
+
+        </dl>
+      </div>
+    </div>
+
+
+
 
   </article>
 

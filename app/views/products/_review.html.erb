@@ -1,17 +1,21 @@
 <article class="review">
 
   <% user = User.find r.user_id %>
-    <p>User: <%= user.name %></p>
-    <p>User email (inspect): <%= user.email %></p>
-    <p>Current user (inspect): <%= current_user.email %></p>
-    <p>Rating: <%= r.rating %></p>
-    <p>Description: <%= r.description%></p>
+    <dt>Reviewer</dt>
+    <dd><%= user.name %></dd>
+    <dt>Rating</dt>
+    <dd><%= r.rating %>/5</dd>
+    <dt>Comment</dt>
+    <dd><%= r.description%></dd>
+    <br>
 
-
-    <% if current_user.email == user.email %>
-      <%= link_to 'Delete', product_path(@product),
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %>
+    <% if current_user %>
+      <% if current_user.email == user.email %>
+        <dt><%= link_to 'Delete', product_path(@product),
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></dt>
       <% end %>
+    <% end %>
+        <dd> </dd>
 </article>
 
