@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   
-  before_filter :authorize
+  before_filter :authorize, only: [:show]
 
   def show
   end
