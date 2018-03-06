@@ -29,8 +29,6 @@ RSpec.feature "Visitor navigates to product page", type: :feature, js: true do
       # DEBUG / VERIFY
       save_screenshot
 
-      puts page.html
-
       expect(page).to have_css('a[href="/cart"]', text: "My Cart (1)")
       # expect(page).to have_css()
     end
